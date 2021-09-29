@@ -14,7 +14,7 @@ const SiteOne = ({ history }: RouteComponentProps<any>) => {
   return (
     <MicroFrontend
       host={REACT_APP_SITE_ONE_FRONT_END}
-      name="Site One"
+      name="SiteOne"
       history={history}
     />
   );
@@ -25,8 +25,14 @@ function App() {
     <>
       <BrowserRouter>
         <header>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/site-one">Sight One</NavLink>
+          <ul>
+            <li>
+              <NavLink to="/">Home</NavLink>
+            </li>
+            <li>
+              <NavLink to="/site-one">Site One</NavLink>
+            </li>
+          </ul>
         </header>
 
         <Switch>

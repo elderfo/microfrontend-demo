@@ -6,7 +6,7 @@ function App({ history }: { history?: RRHistory }) {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Search</h1>
+        <h1>Site one</h1>
       </header>
     </div>
   );

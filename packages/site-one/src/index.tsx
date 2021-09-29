@@ -12,7 +12,7 @@ import reportWebVitals from './reportWebVitals';
 // );
 
 // render micro frontend function
-window.renderSearch = (containerId: string, history: RRHistory) => {
+window.renderSiteOne = (containerId: string, history: RRHistory) => {
   ReactDOM.render(
     <App history={history} />,
     document.getElementById(containerId)
@@ -20,7 +20,7 @@ window.renderSearch = (containerId: string, history: RRHistory) => {
 };
 
 // unmount micro frontend function
-window.unmountSearch = (containerId: string) => {
+window.unmountSiteOne = (containerId: string) => {
   const element = document.getElementById(containerId);
 
   if (element) {
@@ -29,7 +29,7 @@ window.unmountSearch = (containerId: string) => {
 };
 
 // Mount to root if it is not a micro frontend
-if (!document.getElementById('Search-container')) {
+if (!document.getElementById('SiteOne-container')) {
   ReactDOM.render(<App />, document.getElementById('root'));
 }
 

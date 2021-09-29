@@ -18,7 +18,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "BROWSER=none PORT=9001 react-scripts start",
+    "start": "cross-env BROWSER=none PORT=9001 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -42,6 +42,7 @@
     ]
   },
   "devDependencies": {
-    "@types/react-router": "^5.1.16"
+    "@types/react-router": "^5.1.16",
+    "cross-env": "^7.0.3"
   }
 }

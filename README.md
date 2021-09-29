@@ -26,3 +26,9 @@ yarn install
 ```powershell
 yarn start
 ```
+
+Browse to the application:
+
+- Container: http://localhost:3000
+- Site One: http://localhost:9001
+- Site Two: http://localhost:9002

@@ -2,8 +2,8 @@ import { useHistory } from 'react-router';
 
 declare global {
   interface Window {
-    renderSearch: any;
-    unmountSearch: any;
+    renderSiteOne: any;
+    unmountSiteOne: any;
   }
 }
 

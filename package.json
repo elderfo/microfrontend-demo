@@ -15,7 +15,7 @@
     "site-one": "yarn workspace @microfrontend-demo/site-one",
     "start": "concurrently -n site-one,container \"yarn site-one:start\" \"yarn container:start\""
   },
-  "dependencies": {
+  "devDependencies": {
     "concurrently": "^6.2.2"
   }
 }
