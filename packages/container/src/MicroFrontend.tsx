@@ -1,12 +1,10 @@
 import React from 'react';
-import { useHistory } from 'react-router';
 
 interface MicroFrontendProps {
   name: string;
   host: string;
   document: Document;
   window: typeof window;
-  history: ReturnType<typeof useHistory>;
 }
 
 class MicroFrontend extends React.Component<MicroFrontendProps> {
@@ -71,9 +69,9 @@ class MicroFrontend extends React.Component<MicroFrontendProps> {
   }
 
   renderMicroFrontend = () => {
-    const { name, window, history } = this.props;
+    const { name, window } = this.props;
     const wnd = window as any;
-    wnd[`render${name}`](`${name}-container`, history);
+    wnd[`render${name}`](`${name}-container`);
   };
 
   render() {

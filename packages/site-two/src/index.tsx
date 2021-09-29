@@ -1,18 +1,14 @@
 import ReactDOM from 'react-dom';
 import App from './App';
-import { RRHistory } from './global';
 import reportWebVitals from './reportWebVitals';
 
 // render micro frontend function
-window.renderSiteOne = (containerId: string, history: RRHistory) => {
-  ReactDOM.render(
-    <App history={history} />,
-    document.getElementById(containerId)
-  );
+window.renderSiteTwo = (containerId: string) => {
+  ReactDOM.render(<App />, document.getElementById(containerId));
 };
 
 // unmount micro frontend function
-window.unmountSiteOne = (containerId: string) => {
+window.unmountSiteTwo = (containerId: string) => {
   const element = document.getElementById(containerId);
 
   if (element) {
@@ -21,7 +17,7 @@ window.unmountSiteOne = (containerId: string) => {
 };
 
 // Mount to root if it is not a micro frontend
-if (!document.getElementById('SiteOne-container')) {
+if (!document.getElementById('SiteTwo-container')) {
   ReactDOM.render(<App />, document.getElementById('root'));
 }
 
