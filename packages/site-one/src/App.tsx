@@ -1,8 +1,6 @@
 import React from 'react';
 
-import { RRHistory } from './global';
-
-function App({ history }: { history?: RRHistory }) {
+function App() {
   return (
     <div className="App">
       <header className="App-header">
