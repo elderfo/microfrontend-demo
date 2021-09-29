@@ -1,0 +1,21 @@
+{
+  "name": "edd-client",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Chris Getsfred",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "container:start": "yarn workspace @microfrontend-demo/container start",
+    "container": "yarn workspace @microfrontend-demo/container",
+    "site-one:start": "yarn workspace @microfrontend-demo/site-one start",
+    "site-one": "yarn workspace @microfrontend-demo/site-one",
+    "start": "concurrently -n site-one,container \"yarn site-one:start\" \"yarn container:start\""
+  },
+  "dependencies": {
+    "concurrently": "^6.2.2"
+  }
+}
