@@ -1,22 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import { RRHistory } from './global';
 import reportWebVitals from './reportWebVitals';
 
-// ReactDOM.render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>,
-//   document.getElementById('root')
-// );
-
 // render micro frontend function
-window.renderSiteOne = (containerId: string, history: RRHistory) => {
-  ReactDOM.render(
-    <App history={history} />,
-    document.getElementById(containerId)
-  );
+window.renderSiteOne = (containerId: string) => {
+  ReactDOM.render(<App />, document.getElementById(containerId));
 };
 
 // unmount micro frontend function

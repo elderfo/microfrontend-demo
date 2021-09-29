@@ -1,5 +1,3 @@
-import { useHistory } from 'react-router';
-
 declare global {
   interface Window {
     renderSiteOne: any;
@@ -7,4 +5,4 @@ declare global {
   }
 }
 
-export type RRHistory = ReturnType<typeof useHistory>;
+export {};
